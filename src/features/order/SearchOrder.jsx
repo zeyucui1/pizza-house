@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const SearchOrder = () => {
+  // 获取输入框内的query值 储存在state中
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
   const handleSubmit = (e) => {
