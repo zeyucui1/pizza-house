@@ -1,15 +1,27 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from './ui/Home';
-// 这里的loader as menuLoader是将loader重命名为menuLoader
-import Menu, { loader as menuLoader } from './features/menu/Menu';
-import Cart from './features/cart/Cart';
+import { lazy, Suspense } from 'react';
+import { loader as menuLoader } from './features/menu/Menu';
+import { loader as orderLoader } from './features/order/Order';
+import { action as UpdateOrderAction } from './features/order/UpdateOrder';
 import CreateOrder, {
   action as createOrderAction,
 } from './features/order/CreateOrder';
-import Order, { loader as orderLoader } from './features/order/Order';
-import AppLayout from './ui/AppLayout';
+
+// import Menu from './features/menu/Menu';
+// import Cart from './features/cart/Cart';
+// import Order from './features/order/Order';
+// import AppLayout from './ui/AppLayout';
+// import Home from './ui/Home';
 import Error from './ui/Error';
-import { action as UpdateOrderAction } from './features/order/UpdateOrder';
+import Loader from './ui/Loader';
+
+// lazy loading
+const Menu = lazy(() => import('./features/menu/Menu'));
+const Cart = lazy(() => import('./features/cart/Cart'));
+const Order = lazy(() => import('./features/order/Order'));
+const AppLayout = lazy(() => import('./ui/AppLayout'));
+const Home = lazy(() => import('./ui/Home'));
+
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -45,7 +57,11 @@ const router = createBrowserRouter([
   },
 ]);
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <Suspense fallback={<Loader />}>
+      <RouterProvider router={router} />
+    </Suspense>
+  );
 };
 
 export default App;
