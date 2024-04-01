@@ -26,7 +26,8 @@ The PizzaHouse project is a hands-on exercise to apply various React and modern 
 - **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs with a mobile-first approach.
 - **React Router**: A collection of navigational components for creating single-page applications with dynamic, client-side routing.
 
-Learning Objectives 📚
+## Learning Objectives 📚
+
 This project served as a practice ground for the following key concepts:
 
 Conditional Rendering: Dynamically render different components based on the application state.
@@ -35,5 +36,6 @@ Responsive Design: Utilize Tailwind CSS to ensure the application is mobile-frie
 Contributing 🤝
 Feel free to fork the project, make changes, and open a pull request to contribute. Please ensure you discuss the changes via issues before a pull request.
 
-License 📜
-This project is open-sourced under the MIT license.
+## Deployed Version 🚀
+
+Live demo (Feel free to visit) 👉🏻 : https://pizza-house-ochre.vercel.app
