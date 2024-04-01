@@ -35,8 +35,5 @@ Responsive Design: Utilize Tailwind CSS to ensure the application is mobile-frie
 Contributing 🤝
 Feel free to fork the project, make changes, and open a pull request to contribute. Please ensure you discuss the changes via issues before a pull request.
 
-Feedback and Support 📢
-Any feedback and queries are welcome at your-email@example.com. Please don't hesitate to reach out and share your thoughts or seek assistance with the project.
-
 License 📜
 This project is open-sourced under the MIT license.
